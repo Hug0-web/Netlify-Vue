@@ -1,4 +1,3 @@
-import axios from 'axios';
 import Auth from './Auth';
 import Home from './Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
