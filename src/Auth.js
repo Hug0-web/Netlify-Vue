@@ -23,7 +23,7 @@ const [Password, setPassword] = useState('');
     });
 
     const data = await res.json();
-    console.log(data);
+    
 
     if(data.token) {
 
