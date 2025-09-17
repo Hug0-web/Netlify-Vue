@@ -50,6 +50,10 @@
             }
           });
 
+          if (!deleteContact.ok) {
+            throw new Error("Erreur de Délétion");
+          }
+          
           console.log('Utilisateur supprimé avec succès');
 
         } catch (e) {
@@ -73,6 +77,11 @@
         body: JSON.stringify({First_Name, Last_Name, Phone_Number}),
       });
 
+      const newContact = await create.json();
+
+      if (!newContact.ok) {
+        throw new Error("Erreur de Création");
+      }
 
       setFirstName("");
       setLastName("");
@@ -111,7 +120,11 @@
           body: JSON.stringify({First_Name, Last_Name, Phone_Number}),
         }
       );
-    
+
+      if (!update.ok) {
+        throw new Error("Erreur de mise à jour");
+      }
+      
       setIsEditing(false);
       setSelectedContact(null);
       setFirstName("");
