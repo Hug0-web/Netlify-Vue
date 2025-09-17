@@ -49,6 +49,8 @@
               'Content-Type': 'application/json'
             }
           });
+          
+          if()
 
           console.log('Utilisateur supprimé avec succès');
 
@@ -113,6 +115,10 @@
         }
       );
     
+      if (!update.ok) {
+        throw new Error("Erreur de mise à jour");
+      }
+
       setIsEditing(false);
       setSelectedContact(null);
       setFirstName("");
