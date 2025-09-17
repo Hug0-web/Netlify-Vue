@@ -73,7 +73,6 @@
         body: JSON.stringify({First_Name, Last_Name, Phone_Number}),
       });
 
-      const newContact = await create.json();
 
       setFirstName("");
       setLastName("");
